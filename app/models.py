@@ -7,3 +7,4 @@ class Student(BaseModel):
     age: int
     department: str
     organization: str
+    area: str
