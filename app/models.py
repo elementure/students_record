@@ -6,4 +6,3 @@ class Student(BaseModel):
     name: str
     age: int
     department: str
-    organization: str
