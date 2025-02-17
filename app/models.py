@@ -8,3 +8,4 @@ class Student(BaseModel):
     department: str
     area: str
     state: str
+    country: str
