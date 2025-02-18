@@ -22,6 +22,8 @@ pipeline {
         stage('Deploy on EC2') {
             steps {
                 sh '''
+                docker stop $CONTAINER_NAME || true
+                docker rm $CONTAINER_NAME || true
                 docker run -d --name $CONTAINER_NAME --env-file /opt/fastapi_app/.env -p 80:8000 $IMAGE_NAME
                 '''
             }
